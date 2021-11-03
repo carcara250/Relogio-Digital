@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogio Digital</title>
+    <script>
+        function displayTime() {
+            var elt = document.getElementById("clock");
+            var now = new Date();
+            elt.innerHTML = now.toLocaleTimeString();
+            setTimeout(displayTime, 1000);
+        }
+        window.onload = displayTime;
+    </script>
+    <style>
+        .fundo{
+            background-image: image("logo-depen.png");
+             margin: 100px 0px 0px 0px;
+             padding: 5px;
+             text-align: center;
+             position: absolute;
+        }
+        .relogio {
+            position: absolute;
+            padding-left: 300px;
+            margin-top: 450px;
+        
+        }
+      
+        #clock {
+            font: bold 150pt sans;
+            background: #ddf;
+            padding: 10px;
+            border-radius: 10px;
+            border: solid 2px black;
+            margin: 250px;
+        }
+
+        .rodape {
+            background-color: grey;
+            color: ivory;
+            position: absolute;
+            bottom: 0;
+            width: 100%;           
+        }
+        .titulo {
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="fundo">
+        <div  class="relogio"><img src="logo-depen.png" alt="relogio2"></div>
+        <h1 class="titulo">SETOR TRANSPORTE</h1>
+        <samp id="clock"></samp>
+    </div>
+    <footer class="rodape">Desenvolvido por: Wellington Santos
+        @CopyRight
+    </footer>
+</body>
+</html>
